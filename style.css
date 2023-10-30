@@ -1,0 +1,283 @@
+/* Accordion with CSS only */
+/* https://stackoverflow.com/questions/13630229/can-i-have-an-onclick-effect-in-css */
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --sof-red: hsl(14, 88%, 65%);
+  --pure-white: hsl(0, 0%, 100%);
+  /* Background colors */
+  --soft-violent-grad-part_1: hsl(273, 75%, 66%);
+  --soft-blue-bgn-grad-part_2: hsl(240, 73%, 65%);
+  /* Text colors */
+  --very-dark-grayish-blue-text: hsl(237, 12%, 33%);
+  --dark-grayish-blue-text:  hsl(240, 6%, 50%);
+  /* Divider colors */
+  --light-grayish-blue-divider: hsl(240, 5%, 91%);
+  /* Text settings */
+  --ff: 'Kumbh Sans', sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+html {
+  font-size: 12px;
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Mobile styling */
+body {
+  background-image: linear-gradient(var(--soft-violent-grad-part_1), var(--soft-blue-bgn-grad-part_2));
+  background-repeat: no-repeat;
+
+  /* Placing the card in the center of the screen */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-family: var(--ff);
+}
+
+h1 {
+  font-size: 2.667rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+}
+
+h2 {
+  font-size: 1.083rem;
+  font-weight: var(--fw-normal);
+  color: var(--very-dark-grayish-blue-text);
+}
+
+p {
+  color: var(--dark-grayish-blue-text);
+}
+
+
+article {
+  width: clamp(27.25rem, 87.2vw, 76.667rem);
+  border-radius: 1.917rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  align-items: flex-start;  
+}
+
+/* Placing images to the composition of the image and the background */
+.faq-images__compos {
+  width: 19.75rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  margin: 0 auto;
+}
+
+.faq-images__compos__main {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+  content: url(images/illustration-woman-online-mobile.svg);
+
+}
+
+.faq-images__compos__pattern {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  content: url(images/bg-pattern-mobile.svg);
+  margin-top: 44%;
+}
+
+/* Will be displayed at the desktop layout */
+.faq-images__extra-box {
+  display: none;
+}
+
+/* Placing section elements to the grid */
+.faq-images {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+  z-index: 1;
+  margin-bottom: 1rem;
+
+}
+
+.faq-content {
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 1;
+  padding-top: clamp(10rem, 33vw, 10rem);
+
+  background-color: var(--pure-white);
+  border-radius: 1.917rem;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.50);
+
+  --fc-transition: color 0.25s ease-in-out;
+}
+
+
+/* Placing arrow icons next to the questions */
+.faq-item__question_cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item__question_cont img {
+  width: 0.7rem;
+}
+
+/* Text section styling */
+.faq-cont__items {
+  padding: 2rem 2rem 4rem;
+}
+
+.faq-item__question {
+  padding: 1.6rem 0;
+  transition: var(--fc-transition);
+}
+
+.faq-item__question:hover {
+  color: var(--sof-red);
+  cursor: pointer;
+  transition: var(--fc-transition);
+}
+
+.faq-item__answer {
+  display: none;
+  width: 90%;
+  padding-bottom: 1.6rem;
+}
+
+li {
+  border-bottom: 1px solid var(--light-grayish-blue-divider) ;
+}
+
+.attribution {
+  margin-top: 1.5rem;
+  color: var(--very-dark-desaturated-blue)
+}
+
+.attribution a {
+  color: var(--very-dark-desaturated-blue)
+}
+
+/* Desktop styling */
+@media screen and (min-width:768px) {
+  article {
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    background-color: var(--pure-white);
+    box-shadow: 0px 50px 50px -20px hsla(260, 74%, 27%, 0.5);
+  }
+
+  .faq-images {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: center;
+    overflow: hidden;
+  }
+
+  .faq-images__compos {
+    margin: 0;
+    width: 100%;
+    margin-left: -15%;
+  }
+
+  .faq-images__compos__main {
+    content: url(images/illustration-woman-online-desktop.svg);
+  }
+
+  .faq-images__compos__pattern {
+    content: url(images/bg-pattern-desktop.svg);
+    margin: 0;
+  }
+
+  .faq-images__extra-box {
+    display: block;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    z-index: 1;
+    width: 40%;
+    align-self: center;
+    margin-left: -7.2rem;
+    margin-left: -21%;
+  }
+
+  .faq-content {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    box-shadow: none;
+    padding: 5.4rem 8rem 5rem 0;
+  }
+
+  .faq-cont__title {
+    text-align: left;
+  }
+
+  .faq-cont__items {
+    padding: 0;
+    margin-top: 4rem;
+  }
+
+
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

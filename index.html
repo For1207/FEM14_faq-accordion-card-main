@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <!-- Google Fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Page styles -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <article>
+    <section class="faq-images">
+      <div class="faq-images__compos">
+        <img class="faq-images__compos__main" src="images/illustration-woman-online-mobile.svg" alt="woman stands in the front of the big screen">
+        <img class="faq-images__compos__pattern" src="images/bg-pattern-mobile.svg" alt="background pattern">
+      </div>
+    </section>
+    <img class="faq-images__extra-box" src="images/illustration-box-desktop.svg" alt="box image">
+    <section class="faq-content">
+      <h1 class="faq-cont__title">FAQ</h1>
+      <ul class="faq-cont__items" id="faq-content" onclick="showHide(event);">
+        <li>
+          <div class="faq-item__question_cont">
+            <h2 class="faq-item__question">How many team members can I invite?</h2>
+            <img src="images/icon-arrow-down.svg" alt="arrow down icon">
+          </div>
+          <p class="faq-item__answer">
+            You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+          </p>
+        </li>
+        <li>
+          <div class="faq-item__question_cont">
+            <h2 class="faq-item__question">What is the maximum file upload size?</h2>
+            <img src="images/icon-arrow-down.svg" alt="arrow down icon">
+          </div>
+          <p class="faq-item__answer" id="show">
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
+        </li>
+        <li>
+          <div class="faq-item__question_cont">
+            <h2 class="faq-item__question">How do I reset my password?</h2>
+            <img src="images/icon-arrow-down.svg" alt="arrow down icon">
+          </div>
+          <p class="faq-item__answer">
+            Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+          </p>
+        </li>
+        <li>
+          <div class="faq-item__question_cont">
+            <h2 class="faq-item__question">Can I cancel my subscription?</h2>
+            <img src="images/icon-arrow-down.svg" alt="arrow down icon">
+          </div>
+          <p class="faq-item__answer">
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+        </li>
+        <li>
+          <div class="faq-item__question_cont">
+            <h2 class="faq-item__question">Do you provide additional support?</h2>
+            <img src="images/icon-arrow-down.svg" alt="arrow down icon">
+          </div>
+          <p class="faq-item__answer">
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </article>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/For1207">Igor Mykhalchuk</a>.
+  </div>
+</body>
+</html>
