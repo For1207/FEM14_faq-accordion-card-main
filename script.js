@@ -26,12 +26,12 @@ function showHide(event) {
     const h2List = ulCont.getElementsByTagName('h2');
     const imgList = ulCont.getElementsByTagName('img');
     const pList = ulCont.getElementsByTagName('p');
+    const listLen = h2List.length;
 
-    for (let i = 0; i < h2List.length; i++) {
+    for (let i = 0; i < listLen; i++) {
       h2List[i].classList.remove('item-active');
       imgList[i].classList.remove('item-active');
       pList[i].classList.remove('item-active');
-      
     }
   }
 }
