@@ -198,6 +198,19 @@ li {
   color: var(--very-dark-desaturated-blue)
 }
 
+/* Styles for styling header, rotating the arrow icon and  displaying a paragraph on mouse click */
+h2.item-active {
+  font-weight: var(--fw-bold);
+}
+
+img.item-active {
+  transform: rotate(180deg);
+}
+
+p.item-active {
+  display: block;
+}
+
 /* Desktop styling */
 @media screen and (min-width:768px) {
   article {
