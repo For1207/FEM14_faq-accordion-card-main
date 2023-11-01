@@ -188,7 +188,7 @@ article {
   transition: var(--fc-transition);
 }
 
-.faq-item__question:hover {
+.faq-item__question:is(:hover, :focus) {
   color: var(--sof-red);
   cursor: pointer;
   transition: var(--fc-transition);
