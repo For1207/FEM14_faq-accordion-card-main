@@ -154,6 +154,7 @@ article {
 }
 
 .faq-content {
+  height: 51rem;
   grid-row: 2 / span 2;
   grid-column: 1 / span 1;
   padding-top: clamp(10rem, 33vw, 10rem);
