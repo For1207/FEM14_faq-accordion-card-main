@@ -108,6 +108,7 @@ p {
 
 
 article {
+  margin-top: 5dvh; /* for demonstration purposes */
   width: clamp(27.25rem, 87.2vw, 76.667rem);
   border-radius: 1.917rem;
   display: grid;

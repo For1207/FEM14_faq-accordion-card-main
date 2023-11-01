@@ -1,18 +1,10 @@
-let flag;
-
 function showHide(event) {
   const divCont = event.target.parentElement;
   const liCont = divCont.parentElement;
   const ulCont = liCont.parentElement;
 
-
-  if (flag === 0 || flag === undefined) {
-    show();
-    flag = 1;
-  } else {
-    hide();
-    flag = 0;
-  }
+  hide();
+  show();
 
   // Displays the clicked paragraph
   function show() {
